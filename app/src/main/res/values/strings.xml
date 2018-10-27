@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyBioskop</string>
+    <string name="action_settings">Setting</string>
+    <string name="detail">Detail</string>
+    <string name="list_activity_title">Now</string>
+    <string name="tanggal_tayang">Date Release :</string>
+    <string name="detail_movie">Detail</string>
+    <string name="search">Search</string>
+</resources>

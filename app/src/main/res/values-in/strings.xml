@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BioskopKu</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="detail">Lihat Rinci</string>
+    <string name="list_activity_title">Tayang Sekarang</string>
+    <string name="tanggal_tayang">Tanggal Tayang : </string>
+    <string name="detail_movie">Perincian</string>
+</resources>
