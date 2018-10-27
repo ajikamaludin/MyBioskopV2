@@ -1,6 +1,7 @@
 package ajikamaludin.id.mybioskop;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,7 +42,7 @@ public class CardViewMovieAdapter extends RecyclerView.Adapter<CardViewMovieAdap
 
     @Override
     public void onBindViewHolder(CardViewHolder cardViewHolder, int i) {
-        Movie m = getMovies().get(i);
+        final Movie m = getMovies().get(i);
 
         Glide.with(context)
                 .load(m.getImgPoster())
@@ -57,7 +58,9 @@ public class CardViewMovieAdapter extends RecyclerView.Adapter<CardViewMovieAdap
         cardViewHolder.btnDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO : Call new Intent Form Here
+                Intent intent = new Intent(context, DetailMovie.class);
+                intent.putExtra(MainActivity.MOVIE, m);
+                context.startActivity(intent);
             }
         });
     }

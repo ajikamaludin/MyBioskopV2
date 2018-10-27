@@ -71,15 +71,19 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
             @Override
             public void onItemClicked(RecyclerView recyclerView, int position, View v) {
-                startIntent(list, position);
+                startIntent(position);
             }
         });
     }
 
-    private void startIntent(ArrayList<Movie> list, int positon){
+    private void startIntent(int positon){
         Intent intent = new Intent(MainActivity.this, DetailMovie.class);
         intent.putExtra(MOVIE, list.get(positon));
         startActivity(intent);
+    }
+
+    public void startInt(int position){
+        startInt(position);
     }
 
     @Override
