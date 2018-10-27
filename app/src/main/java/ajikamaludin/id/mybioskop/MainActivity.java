@@ -1,8 +1,11 @@
 package ajikamaludin.id.mybioskop;
 
 import android.app.LoaderManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.Loader;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -59,8 +62,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         recyclerView = findViewById(R.id.mainRecycler);
         recyclerView.setHasFixedSize(true);
 
-        LoaderManager lm = getLoaderManager();
-        lm.initLoader(0, null, this).forceLoad();
+        if(this.isOnline() || list != null){
+            LoaderManager lm = getLoaderManager();
+            lm.initLoader(0, null, this).forceLoad();
+        }else{
+            setContentView(R.layout.offline);
+        }
+
     }
 
     private void showRecyclerCardView(){
@@ -82,8 +90,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         startActivity(intent);
     }
 
-    public void startInt(int position){
-        startInt(position);
+    public boolean isOnline() {
+        ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+        return (networkInfo != null && networkInfo.isConnected());
     }
 
     @Override

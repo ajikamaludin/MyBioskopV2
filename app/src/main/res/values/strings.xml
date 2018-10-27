@@ -6,4 +6,7 @@
     <string name="tanggal_tayang">Date Release :</string>
     <string name="detail_movie">Detail</string>
     <string name="search">Search</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="empty_view_title_text">Terjadi Pemasalahan</string>
+    <string name="empty_view_subtitle_text">Koneksi Internet Tidak Tersedia</string>
 </resources>
