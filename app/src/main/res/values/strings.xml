@@ -2,10 +2,11 @@
     <string name="app_name">MyBioskop</string>
     <string name="action_settings">Settings</string>
     <string name="detail">Detail</string>
-    <string name="list_activity_title">Now</string>
+    <string name="list_activity_title">Film Now</string>
     <string name="tanggal_tayang">Date Release :</string>
     <string name="detail_movie">Detail</string>
     <string name="search">Search</string>
     <string name="empty_view_title_text">Problems occur</string>
     <string name="empty_view_subtitle_text">Internet Connection Not Available</string>
+    <string name="review">Overview :</string>
 </resources>

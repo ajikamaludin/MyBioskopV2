@@ -8,4 +8,5 @@
     <string name="search">Cari</string>
     <string name="empty_view_title_text">Terjadi Pemasalahan</string>
     <string name="empty_view_subtitle_text">Koneksi Internet Tidak Tersedia</string>
+    <string name="review">Sinopsis :</string>
 </resources>
