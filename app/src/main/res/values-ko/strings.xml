@@ -5,4 +5,7 @@
     <string name="list_activity_title">지금 공기</string>
     <string name="tanggal_tayang">출시일 : </string>
     <string name="detail_movie">세부 정보</string>
+    <string name="search">찾고있는</string>
+    <string name="empty_view_title_text">문제 발생</string>
+    <string name="empty_view_subtitle_text">인터넷 연결을 사용할 수 없음</string>
 </resources>

@@ -5,4 +5,7 @@
     <string name="list_activity_title">Tayang Sekarang</string>
     <string name="tanggal_tayang">Tanggal Tayang : </string>
     <string name="detail_movie">Perincian</string>
+    <string name="search">Cari</string>
+    <string name="empty_view_title_text">Terjadi Pemasalahan</string>
+    <string name="empty_view_subtitle_text">Koneksi Internet Tidak Tersedia</string>
 </resources>
