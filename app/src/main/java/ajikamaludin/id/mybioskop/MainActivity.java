@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 startActivity(intent);
                 Toast.makeText(getApplicationContext(), R.string.action_settings ,Toast.LENGTH_SHORT).show();
                 return true;
+            case R.id.action_about:
+                Toast.makeText(getApplicationContext(), R.string.developers, Toast.LENGTH_LONG).show();
             default:
                 return super.onOptionsItemSelected(item);
         }

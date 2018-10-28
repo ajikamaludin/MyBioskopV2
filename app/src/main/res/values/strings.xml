@@ -9,4 +9,6 @@
     <string name="empty_view_title_text">Problems occur</string>
     <string name="empty_view_subtitle_text">Internet Connection Not Available</string>
     <string name="review">Overview :</string>
+    <string name="action_about">About</string>
+    <string name="developers">Application MyBioskop By Aji Kamaludin</string>
 </resources>
