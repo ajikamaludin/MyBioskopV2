@@ -11,7 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -27,7 +26,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     private RecyclerView recyclerView;
     private ArrayList<Movie> list;
-    private  MenuItem mSearch;
     private ProgressBar progressBar;
 
     private String URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=67b6380268ec08352e29f665e862f113&region=ID";
@@ -68,7 +66,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         }else{
             setContentView(R.layout.offline);
         }
-
     }
 
     private void showRecyclerCardView(){
@@ -84,9 +81,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         });
     }
 
-    private void startIntent(int positon){
+    private void startIntent(int position){
         Intent intent = new Intent(MainActivity.this, DetailMovie.class);
-        intent.putExtra(MOVIE, list.get(positon));
+        intent.putExtra(MOVIE, list.get(position));
         startActivity(intent);
     }
 
@@ -104,10 +101,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     public void onLoadFinished(Loader<ArrayList<Movie>> loader, ArrayList<Movie> movies) {
         this.list = movies;
-        if(this.list != null){
+        if(this.list.size() > 0){
             showRecyclerCardView();
         }else{
-            Toast.makeText(getApplicationContext(), "Upps Something Go Wrong",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Ups, Something Went Wrong",Toast.LENGTH_LONG).show();
         }
         progressBar.setVisibility(View.INVISIBLE);
     }
