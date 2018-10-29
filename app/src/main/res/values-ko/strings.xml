@@ -10,4 +10,5 @@
     <string name="empty_view_subtitle_text">인터넷 연결을 사용할 수 없음</string>
     <string name="review">시놉시스 :</string>
     <string name="action_about">약</string>
+    <string name="developers">응용 MyBioskop ~로 Aji Kamaludin</string>
 </resources>
